@@ -1,5 +1,5 @@
 const User = require('../../models/user');
-const log = require('../../logger')(module);
+const log = require('../../logger/index')(module);
 
 
 module.exports = async (login, password) => {

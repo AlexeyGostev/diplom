@@ -16,6 +16,10 @@ let schema = new Schema({
     type: String,
     default: ''
   },
+  login: {
+    type: String,
+    default: ''
+  },
   email: {
     type: String,
     default : ''
@@ -30,7 +34,7 @@ let schema = new Schema({
   },
   type: {
     type: String,
-    required: true
+    default: 'user'
   }
 }, { usePushEach: true });
 
