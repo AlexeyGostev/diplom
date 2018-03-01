@@ -10,7 +10,6 @@ module.exports = async (options) => {
       tokenRecord.refreshToken = options.refreshToken;
       tokenRecord.createAt = Date.now();
     } else {
-      console.log(1);
       tokenRecord = new TokensStorage(options);
     }
     return await tokenRecord.save();

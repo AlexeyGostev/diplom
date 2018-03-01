@@ -1,0 +1,26 @@
+{
+  "port" : 3000,
+  "mongoose" : {
+    "uri": {
+      "test": "mongodb://localhost/diplom",
+      "production": "mongodb://localhost/diplom"
+    },
+    "options": {
+      "server": {
+        "poolSize": 10,
+        "socketOptions": {
+          "keepAlive": 1
+        }
+      }
+    }
+  },
+  "request": {
+    "userLimitDefault": 20,
+    "userOffsetDefault": 0
+  },
+  "tokens": {
+    "refreshSecret": "asfwev12!!cqe312ed",
+    "accessSecret": "!se2vcsc9324**212",
+    "accessLifeTime": 7200
+  }
+}
