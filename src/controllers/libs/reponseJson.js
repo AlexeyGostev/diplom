@@ -6,6 +6,7 @@ class ResponseConstructor {
     this.description = typeof status === 'string' ? status : description;
     this.errorCode = typeof errorCode === 'number' ? errorCode : 0;
     this.message = http.STATUS_CODES[this.status];
+    this.body = {};
   }
 
   setAll(status, description, errorCode) {
@@ -41,7 +42,7 @@ class ResponseConstructor {
 
   set(property, value) {
     if (typeof property === 'string') {
-      this[property] = value;
+      this.body[property] = value;
       return true;
     }
     return false;
