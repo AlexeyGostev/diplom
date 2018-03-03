@@ -15,13 +15,15 @@ module.exports = async (req, res, next) => {
     let accessLifeTime = config.get('tokens:accessLifeTime');
     let tokenRecord;
     let user;
+    let dateFoul;
 
     tokenRecord = tokensStorage.findByAccessToken(at);
     if (!tokenRecord) {
       rj.setAll(400, descriptionsConstants.WRONG_TOKEN, errorCodes.WRONG_TOKEN);
       return res.status(rj.status).json(rj);
     }
-    if ((new Date(tokenRecord.createAt + accessLifeTime)) < Date.now()) {
+    dateFoul = +(new Date((+tokenRecord.createAt + accessLifeTime)));
+    if (dateFoul < Date.now()) {
       rj.setAll(401, descriptionsConstants.TOKEN_FOUL, errorCodes.TOKEN_FOUL);
       return res.status(rj.status).json(rj);
     }

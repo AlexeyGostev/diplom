@@ -3,4 +3,5 @@ module.exports = {
   TOKEN_FOUL: 2,
   WRONG_TOKEN: 3,
   USER_IS_MISSING: 4,
+  WRONG_REFRESH_TOKEN: 5,
 };

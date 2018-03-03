@@ -21,6 +21,7 @@
   "tokens": {
     "refreshSecret": "asfwev12!!cqe312ed",
     "accessSecret": "!se2vcsc9324**212",
-    "accessLifeTime": 7200
+    "accessLifeTime": 7200000,
+    "refreshLifeTime": 72000000
   }
 }
